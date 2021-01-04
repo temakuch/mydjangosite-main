@@ -1,0 +1,14 @@
+{% extends 'navbar.html' %}
+
+{% block content  %}
+	<div class = "container">
+	<form method = "POST">
+		{% csrf_token %}
+		{{form}}
+		<br><br><button class = "btn btn-outline-info" type = "submit">Клацяй!</button>
+	</form>
+	<p>Якщо ви вже зареєстровані, залогінтесь тут
+	<a href="/blog/login">тут</a></p>
+	<p>{{error}}</p>
+	</div>
+{% endblock %}
